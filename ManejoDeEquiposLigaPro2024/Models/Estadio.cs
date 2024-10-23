@@ -10,7 +10,7 @@ namespace ManejoDeEquiposLigaPro2024.Models
         public string Direccion { get; set; }
         [MaxLength(50)]
         public string Ciudad { get; set; }
-        [MaxLength(50)]
+ 
         public int Capacidad { get; set; }
     }
 }

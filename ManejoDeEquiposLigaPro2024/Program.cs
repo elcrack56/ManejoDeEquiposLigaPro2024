@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ManejoDeEquiposLigaPro2024.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ManejoDeEquiposLigaPro2024Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ManejoDeEquiposLigaPro2024Context") ?? throw new InvalidOperationException("Connection string 'ManejoDeEquiposLigaPro2024Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

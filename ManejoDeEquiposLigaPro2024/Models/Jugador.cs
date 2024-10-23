@@ -14,6 +14,7 @@ namespace ManejoDeEquiposLigaPro2024.Models
         [Range(14, 40)]
         public int Edad { get; set; }
         public Equipo? equipos { get; set; }
+
         [ForeignKey(nameof(equipos))]
         public int equiposId { get; set; }
 
